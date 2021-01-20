@@ -11,45 +11,47 @@ const product = {
 };
 
 // 1a. Log de naam van de serie in de console.
+
 console.log(product.series);
 
 // 1b. Verander de kleur van het product in "Roze" en log het object in de console
+
 product.color = "roze";
-console.log(product.color);
+console.log(product);
 
 // 1c. Log de tweede materiaalsoort ("kunststof") in de console
-//????
-//for (let i = 1; i < product.material; i++){
-//    product.material = ["kunststof"]
-//}
-console.log(product.material [1])
+
+console.log(product.material[1]);
 
 // 1d. Log de afmetingen (b-h-d) in de console
 
-console.log(product["b-h-d"])
+console.log(product["b-h-d"]);
 
 /* Opdracht 2 */
 // Schrijf een losstaande functie die bovenstaand object verwacht. De functie gebruikt de naam van het product
 // en haar materialen om een string terug te geven die het product beschrijft
 // ---- Verwachte uitkomst:
 // "De Smeg Waterkoker is gemaakt van roestvrijstaal en kunststof"
-function tekst(productObject) {
+
+function getProductDescription(productObject) {
     return "De " + productObject.productName + " is gemaakt van " + productObject.material[0] + " en " + productObject.material[1];
 }
-console.log(tekst(product))
+
+console.log(getProductDescription(product));
 
 /* Opdracht 3 */
 // Maak een object met daarin jouw voornaam (string), achternaam (string),
 // leeftijd (getal) en geboortedatum (date object). De datum hoeft niet geformat te worden.
 // Log dit in de console.
-const ik = {
-    firstName: "Maarten",
-    lastName: "Janssen",
-    age: 48,
-    dateOfBirth: new Date(1972,04,29),
+
+const myself = {
+    firstName: "Nova",
+    lastName: "Eeken",
+    age: 27,
+    dateOfBirth: new Date(1992, 11, 4),
 };
 
-console.log(ik)
+console.log(myself);
 
 /* Opdracht */
 // Schrijf een losstaande functie die bovenstaand object verwacht.
@@ -57,8 +59,9 @@ console.log(ik)
 // ---- Verwachte uitkomsten:
 // { age: 27 } geeft "Jij bent 27 jaar oud."
 // { age: 56 } geeft "Jij bent 56 jaar oud."
-function old (hoeoud) {
-    return "jij bent " + hoeoud.age + " jaar oud."
+
+function yourAge(person) {
+    return "Jij bent " + person.age +  " jaar oud";
 }
 
-console.log(old(ik))
+console.log(yourAge(myself));
